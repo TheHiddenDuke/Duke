@@ -32,7 +32,7 @@ void autoinputReader(ringBuffer* buffer){
         buffer->add(rand()%25 + 97);
 
         //Pauser traden i et sekund.
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
 }
 
