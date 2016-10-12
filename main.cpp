@@ -25,7 +25,7 @@ void keyboardReader (ringBuffer* buffer){
         }
     }
 }
-//ljnjnb
+//ljnjnbjygj
 //Skriver en tilfeldig bokstav inn i ringbufferet.
 void autoinputReader(ringBuffer* buffer){
     while(run){
