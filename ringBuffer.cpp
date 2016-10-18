@@ -18,7 +18,7 @@ void ringBuffer::add(char val){
     std::unique_lock<std::mutex> lock(mutex);
 
     //Stopper traden til den far klarsignal fra ringBuffer::get()
-    while ((in + 1) % bufferSize == out){
+    if ((in + 1) % bufferSize == out){
             full_cv.wait(lock);
     }
     //Setter inn verdi og går til neste plass i ringbuffer
@@ -34,7 +34,7 @@ char ringBuffer::get(){
     std::unique_lock<std::mutex> lock(mutex);
 
     //pauser traden til den far klarsignal fra ringBuffer::add()
-    while (in == out){
+    if (in == out){
         empty_cv.wait(lock);
     }
 
