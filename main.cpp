@@ -9,6 +9,7 @@ void bufferReader(ringBuffer* buffer){
         std::cout << buffer -> get() << std::flush;
     }
 }
+
 //Skriver inn til ringbufferet.
 void keyboardReader (ringBuffer* buffer){
     while (run){
