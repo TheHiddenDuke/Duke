@@ -36,6 +36,7 @@ void autoinputReader(ringBuffer* buffer){
     }
 }
 
+
 int main() {
     //Setter opp ringbuffer
     ringBuffer buffer(10);
